@@ -6,7 +6,6 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageId>kgen.$(AssemblyName)</PackageId>
     <Title>KGen Framework Avalonia</Title>
     <Company>KGen LLC</Company>
     <Authors>Frederic Forjan</Authors>
