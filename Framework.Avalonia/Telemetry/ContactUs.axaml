@@ -1,0 +1,39 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+  x:Class="KGen.Framework.Avalonia.Telemetry.ContactUs">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+          <SolidColorBrush x:Key='HyperLinkColor'>Blue</SolidColorBrush>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+          <SolidColorBrush x:Key='HyperLinkColor'>LightBlue</SolidColorBrush>
+        </ResourceDictionary>
+      </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <StackPanel Orientation="Horizontal">
+    <TextBlock Margin="5,0,0,0">You need more info or non-telemetry version? Please
+      contact us at </TextBlock>
+    <TextBlock
+      Margin="0,0,5,0"
+      Foreground="{DynamicResource HyperLinkColor}"
+      PointerPressed="ContactUsClick">
+      <TextBlock.TextDecorations>
+        <TextDecorationCollection>
+          <TextDecoration
+            Location="Underline"
+            StrokeThicknessUnit="Pixel"
+            StrokeThickness="1"
+            StrokeOffset="3"
+            StrokeOffsetUnit="Pixel"
+            Stroke="Blue"></TextDecoration>
+        </TextDecorationCollection>
+      </TextBlock.TextDecorations>
+      tech@kgen-llc.com </TextBlock>
+  </StackPanel>
+</UserControl>

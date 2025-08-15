@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageId>kgen.$(AssemblyName)</PackageId>
+    <Title>KGen Framework Avalonia</Title>
+    <Company>KGen LLC</Company>
+    <Authors>Frederic Forjan</Authors>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+    <Description>Base framework for some of our applications based on Avalonia</Description>
+    <Product>Roslyn Viewer</Product>
+    <Copyright>Copyright 2025 KGEN LLC</Copyright>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.4" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.4" />
+
+
+
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+    <None Include="../LICENSE" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>

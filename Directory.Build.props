@@ -1,0 +1,24 @@
+<Project>
+
+    <PropertyGroup>
+        <AssemblyName>kgen.$(MSBuildProjectName)</AssemblyName>
+        <Version>0.0.1</Version>
+        <Company>KGen LLC</Company>
+        <PackageProjectUrl>https://github.com/kgen-llc/framework.avalonia</PackageProjectUrl>
+        <Authors>Frederic Forjan</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <AnalysisLevel>latest-all</AnalysisLevel>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Meziantou.Analyzer" Version="2.0.188">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

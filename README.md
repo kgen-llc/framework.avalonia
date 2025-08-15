@@ -1,2 +1,3 @@
-# framework.avalonia
-Base framework for some of our application
+# Framework Avalonia
+
+Base framework for some of our applications base on Avalonia

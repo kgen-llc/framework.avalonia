@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="using:KGen.Framework.Avalonia.Telemetry"
+  Width="600" Height="250"
+  x:Class="KGen.Framework.Avalonia.Telemetry.ConsentDialog"
+  CanResize="False">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <TextBlock TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="10"> This application collects
+      anonymous usage data using plausible.io to help us understand how users interact with the product, which features
+      are most popular, and to gauge interest in the app. This data helps us improve the product. No personal data is tracked, and all data is
+      collected anonymously. <LineBreak /><LineBreak />By clicking 'Yes', telemetry will be enabled,
+      and your anonymous usage data will be collected. By clicking 'No', you will not able to use
+      this demo app.</TextBlock>
+    <local:ContactUs Grid.ColumnSpan="2" Grid.Row="1" />
+    <Button Margin="5" Click="YesButtonClick" Content="Yes" HorizontalAlignment="Center"
+      HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="80" />
+    <Button Margin="5" Click="NoButtonClick" Content="No" HorizontalAlignment="Center"
+      HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Width="80" />
+  </Grid>
+</Window>
