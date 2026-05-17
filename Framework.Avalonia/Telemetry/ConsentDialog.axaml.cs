@@ -21,7 +21,7 @@ public partial class ConsentDialog : Window
     public void YesButtonClick(object sender, RoutedEventArgs args)
     {
 #if !DEBUG
-        _ = TelemetryClient.InitTelemetry(KGenApp.ProductName, KGenApp.PlatformInfo); // we only init the telemetry when the user click yes and in debug
+        _ = AvaloniaTelemetry.InitTelemetry(KGenApp.ProductName, KGenApp.PlatformInfo); // we only init the telemetry when the user click yes and in debug
 #endif
         var desktop = (IClassicDesktopStyleApplicationLifetime)Application.Current!.ApplicationLifetime!;
      

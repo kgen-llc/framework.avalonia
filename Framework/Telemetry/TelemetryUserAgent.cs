@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace KGen.Framework.Avalonia.Telemetry;
+namespace KGen.Framework.Telemetry;
 
 public static class TelemetryUserAgent
 {

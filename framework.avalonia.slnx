@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Framework.Avalonia.Demo/Framework.Avalonia.Demo.csproj" />
   <Project Path="Framework.Avalonia/Framework.Avalonia.csproj" />
+  <Project Path="Framework/Framework.csproj" />
 </Solution>

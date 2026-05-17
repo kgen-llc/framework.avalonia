@@ -15,7 +15,7 @@ internal sealed partial class ContactUs : UserControl
 
     public void ContactUsClick(object? sender, PointerPressedEventArgs e) 
     {
-        _ = TelemetryClient.Instance?.TrackPageView("ContactUs");
+        _ = Framework.Telemetry.TelemetryClient.Instance?.TrackPageView("ContactUs");
         OpenMailClient("tech@kgen-llc.com", $"Information regarding the ${KGenApp.ProductName} ", "Could we get in touch ?");
     }
 

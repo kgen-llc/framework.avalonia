@@ -1,8 +1,6 @@
 using System.Text;
-using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
 
-namespace KGen.Framework.Avalonia.Telemetry;
+namespace KGen.Framework.Telemetry;
 
 public class TelemetryClient
 {
@@ -20,12 +18,6 @@ public class TelemetryClient
         }
 
         Instance = new (productName, browser);
-
-         var lifetime = (IClassicDesktopStyleApplicationLifetime)Application.Current!.ApplicationLifetime!;
-            lifetime.Exit += (sender, e) =>
-            {
-                Instance.TrackPageView("Exit").Wait(); 
-            };
 
          await Instance.TrackPageView("Startup").ConfigureAwait(false);
     }
