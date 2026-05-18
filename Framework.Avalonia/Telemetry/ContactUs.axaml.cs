@@ -2,8 +2,6 @@ using System.Diagnostics;
 using Avalonia.Controls;
 using Avalonia.Input;
 
-using Framework.Avalonia;
-
 namespace KGen.Framework.Avalonia.Telemetry;
 
 internal sealed partial class ContactUs : UserControl

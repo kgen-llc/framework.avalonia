@@ -2,7 +2,6 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Interactivity;
-using Framework.Avalonia;
 
 namespace KGen.Framework.Avalonia.Telemetry;
 

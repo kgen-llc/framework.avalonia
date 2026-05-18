@@ -1,7 +1,6 @@
-using System;
 using System.Reflection;
 
-namespace Framework.Avalonia;
+namespace KGen.Framework;
 
 public static class KGenApp
 {
