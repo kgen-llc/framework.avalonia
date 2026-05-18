@@ -6,7 +6,7 @@
         <Company>KGen LLC</Company>
         <PackageProjectUrl>https://github.com/kgen-llc/framework.avalonia</PackageProjectUrl>
         <Authors>Frederic Forjan</Authors>
-        <PackageId>kgen.$(AssemblyName)</PackageId>    
+        <PackageId>$(AssemblyName)</PackageId>    
         <Product>KGen Framework</Product>
         <Copyright>Copyright 2025 KGEN LLC</Copyright>    
     </PropertyGroup>
