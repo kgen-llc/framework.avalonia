@@ -5,14 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Title>KGen Framework Avalonia</Title>
-    <Company>KGen LLC</Company>
-    <Authors>Frederic Forjan</Authors>
-    <AnalysisLevel>latest-all</AnalysisLevel>
     <Description>Base framework for some of our applications based on Avalonia</Description>
-    <Product>Roslyn Viewer</Product>
-    <Copyright>Copyright 2025 KGEN LLC</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
   </PropertyGroup>
 

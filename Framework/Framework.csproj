@@ -4,10 +4,16 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Title>Framework</Title>
-    <Company>KGen LLC</Company>
-    <Authors>Frederic Forjan</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>KGen Framework</Title>
+    <Description>Base framework for some of our applications</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
+
+  <ItemGroup>
+     <None Include="../README.md" Pack="true" PackagePath="\" />
+     <None Include="../LICENSE" Pack="true" PackagePath="/" />
+  </ItemGroup>
 </Project>
