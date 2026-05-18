@@ -11,7 +11,7 @@ public static class AvaloniaTelemetry
         var lifetime = (IClassicDesktopStyleApplicationLifetime)Application.Current!.ApplicationLifetime!;
         lifetime.Exit += (sender, e) =>
         {
-            Framework.Telemetry.TelemetryClient.Instance?.TrackPageView("Exit").Wait(); 
+            Framework.Telemetry.TelemetryClient.ExitTelemetry().Wait();
         };
 }
 }

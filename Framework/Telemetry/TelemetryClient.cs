@@ -15,7 +15,7 @@ public class TelemetryClient
         {
             throw new ArgumentException("Product name cannot be null or empty.", nameof(productName));
         }
-        
+
         if(!string.Equals(Environment.GetEnvironmentVariable("KGEN_NO_TELEMETRY"), "0", StringComparison.Ordinal) || !string.Equals(Environment.GetEnvironmentVariable($"KGEN_NO_TELEMETRY_{productName.ToUpperInvariant()}"), "0", StringComparison.Ordinal))
         {
             return;
@@ -28,6 +28,15 @@ public class TelemetryClient
         Instance = new (productName, browser);
 
          await Instance.TrackPageView("Startup").ConfigureAwait(false);
+    }
+
+    public static async Task ExitTelemetry()
+    {
+        if(Instance == null)
+        {
+            return;
+        }
+        await Instance.TrackPageView("Exit").ConfigureAwait(false); 
     }
 
     protected TelemetryClient(string productName, string browser)
