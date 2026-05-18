@@ -1,7 +1,6 @@
 using System.Text;
 
 namespace KGen.Framework.Telemetry;
-
 public class TelemetryClient
 {
     private static readonly Uri PlausibleApiUrl = new("https://plausible.io/api/event");
@@ -12,6 +11,15 @@ public class TelemetryClient
 
     public static async Task InitTelemetry(string productName, string browser)
     {
+        if(string.IsNullOrEmpty(productName))
+        {
+            throw new ArgumentException("Product name cannot be null or empty.", nameof(productName));
+        }
+        
+        if(!string.Equals(Environment.GetEnvironmentVariable("KGEN_NO_TELEMETRY"), "0", StringComparison.Ordinal) || !string.Equals(Environment.GetEnvironmentVariable($"KGEN_NO_TELEMETRY_{productName.ToUpperInvariant()}"), "0", StringComparison.Ordinal))
+        {
+            return;
+        }
         if (Instance != null)
         {
             throw new InvalidOperationException("TelemetryClient is already initialized.");
