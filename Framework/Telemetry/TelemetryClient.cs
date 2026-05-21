@@ -48,8 +48,9 @@ public class TelemetryClient
 
     public async Task<bool> TrackPageView(string pageName)
     {
+        // we only have one domain for all applicationsm so we use product name as part of the url
         using var content = new StringContent(
-            $"{{\"name\":\"pageview\",\"url\":\"app://{productName}/{pageName}\",\"domain\":\"kgen-llc.com\"}}", 
+            $"{{\"name\":\"pageview\",\"url\":\"app://kgen-llc.com/{productName}/{pageName}\",\"domain\":\"kgen-llc.com\"}}", 
             Encoding.UTF8, "application/json");
 
 #pragma warning disable CA1031 // Do not catch general exception types - we do not want any exception if telemetry is off
