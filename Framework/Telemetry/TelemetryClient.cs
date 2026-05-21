@@ -16,7 +16,7 @@ public class TelemetryClient
             throw new ArgumentException("Product name cannot be null or empty.", nameof(productName));
         }
 
-        if(!string.Equals(Environment.GetEnvironmentVariable("KGEN_NO_TELEMETRY"), "0", StringComparison.Ordinal) || !string.Equals(Environment.GetEnvironmentVariable($"KGEN_NO_TELEMETRY_{productName.ToUpperInvariant()}"), "0", StringComparison.Ordinal))
+        if(string.Equals(Environment.GetEnvironmentVariable("KGEN_NO_TELEMETRY"), "1", StringComparison.Ordinal) || string.Equals(Environment.GetEnvironmentVariable($"KGEN_NO_TELEMETRY_{productName.ToUpperInvariant()}"), "1", StringComparison.Ordinal))
         {
             return;
         }
