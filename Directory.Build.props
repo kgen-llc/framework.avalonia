@@ -17,10 +17,6 @@
     </PropertyGroup>
 
 
-    <ItemGroup>
-        <PackageReference Include="Meziantou.Analyzer">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
+    <!-- Import analyzer configuration maintained separately -->
+  <Import Project="Directory.Build.Analyzers.props" Condition="Exists('Directory.Build.Analyzers.props')" />
 </Project>
