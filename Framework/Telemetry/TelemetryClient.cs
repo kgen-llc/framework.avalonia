@@ -2,6 +2,7 @@ using System.Text;
 using System.Text.Json;
 
 namespace KGen.Framework.Telemetry;
+
 public class TelemetryClient
 {
     private static readonly Uri PlausibleApiUrl = new("https://plausible.io/api/event");
@@ -68,15 +69,10 @@ public class TelemetryClient
             return false;
         }
 
-        var payload = new
-        {
-            name = "pageview",
-            url = $"app://kgen-llc.com/{EscapeSegment(productName)}/{EscapeSegment(pageName)}",
-            domain = "kgen-llc.com"
-        };
+        var payload = CreatePageViewPayload(productName, pageName);
 
         using var content = new StringContent(
-            JsonSerializer.Serialize(payload),
+            JsonSerializer.Serialize(payload, TelemetryJsonContext.Default.TelemetryPageViewPayload),
             Encoding.UTF8,
             "application/json");
 
@@ -105,5 +101,13 @@ public class TelemetryClient
     private static string EscapeSegment(string value)
     {
         return Uri.EscapeDataString(value.Trim());
+    }
+
+    internal static TelemetryPageViewPayload CreatePageViewPayload(string productName, string pageName)
+    {
+        return new TelemetryPageViewPayload(
+            "pageview",
+            $"app://kgen-llc.com/{EscapeSegment(productName)}/{EscapeSegment(pageName)}",
+            "kgen-llc.com");
     }
 }

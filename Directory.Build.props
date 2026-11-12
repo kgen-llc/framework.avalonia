@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <AssemblyName>kgen.$(MSBuildProjectName)</AssemblyName>
-        <Version>0.0.1</Version>
+        <Version>0.0.7</Version>
         <Company>KGen LLC</Company>
         <PackageProjectUrl>https://github.com/kgen-llc/framework.avalonia</PackageProjectUrl>
         <Authors>Frederic Forjan</Authors>

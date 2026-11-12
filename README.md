@@ -162,6 +162,10 @@ The framework includes telemetry infrastructure in the `Telemetry` namespace. Th
 
 Implement telemetry according to KGen company standards and privacy policies.
 
+The `kgen.Framework` **0.0.7** package adds source-generated telemetry page-view JSON metadata,
+preserving the `name`, `url`, and `domain` fields for trimmed .NET 11 applications. Validation
+includes the telemetry payload unit test and a trimmed .NET 11 consumer publish.
+
 ### Development Guidelines for KGen
 
 #### Build Process
